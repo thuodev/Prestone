@@ -28,13 +28,7 @@ function calculateGrade(score) {
 let grade = calculateGrade(75);
 alert("The grade for a score of 75 is: " + grade);
 
-// ===== QUESTION SIX: DOM MANIPULATION AND EVENT HANDLING =====
-
-// // Q6a: Retrieve the registration form
-// const form = document.getElementById("registrationForm");
-// const output = document.getElementById("output");
-
-/// ===== QUESTION SIX & SEVEN: DOM, EVENTS AND VALIDATION =====
+//QUESTION SIX & SEVEN: DOM, EVENTS AND VALIDATION
 
 // Q6a: Retrieve the registration form
 const form = document.getElementById("registrationForm");
