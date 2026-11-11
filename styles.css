@@ -1,0 +1,204 @@
+/* Q4a: Background colours, fonts, text formatting */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #0b3d91;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-style: italic;
+}
+
+h2,
+h3 {
+  color: #0b3d91;
+  margin-bottom: 12px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* Q4b: Horizontal navigation with hover effect */
+nav {
+  background-color: #082b66;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 22px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #f5a623;
+  color: #000;
+}
+
+/* Q4d: Flexbox layout for page content */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.container section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1 1 320px;
+}
+
+#students {
+  flex: 1 1 100%;
+  overflow-x: auto;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+/* Q4c: Table borders, padding, spacing */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1px solid #999;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+th {
+  background-color: #0b3d91;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eef2f8;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label,
+.form-group span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.form-group input[type="radio"] {
+  margin-left: 8px;
+}
+
+.form-group label:has(input[type="radio"]) {
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0b3d91;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.form-buttons button:hover {
+  background-color: #f5a623;
+  color: #000;
+}
+
+/* Output / success message (used by script.js) */
+#output {
+  margin-top: 15px;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+footer {
+  background-color: #082b66;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Q4e: Media query for small screens */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}

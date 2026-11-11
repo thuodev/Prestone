@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Student Information Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Q1c: Header -->
+    <header id="home">
+      <h1>Masinde Muliro University of Science and Technology</h1>
+      <h2>University Student Information Portal</h2>
+    </header>
+
+    <!-- Q1d: Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#registration">Student Registration</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <!-- Q2a, Q2b: About section -->
+      <section id="about">
+        <h2>About the Portal</h2>
+        <p>
+          The Student Information Portal allows students to register online,
+          view their academic details and access university information quickly
+          and conveniently in one place.
+        </p>
+
+        <h3>Programmes Offered</h3>
+        <ul>
+          <li>Bachelor of Science in Computer Science</li>
+          <li>Bachelor of Science in Information Technology</li>
+          <li>Bachelor of Business Information Technology</li>
+          <li>Bachelor of Science in Software Engineering</li>
+        </ul>
+      </section>
+
+      <!-- Q2c: Student information table -->
+      <section id="students">
+        <h2>Student Information</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Student Name</th>
+              <th>Registration Number</th>
+              <th>Programme</th>
+              <th>Year of Study</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Samson Thuo</td>
+              <td><COM>
+              <B>
+              <01-00136/2025></01-00136/2025></td>
+              <td>Computer Science</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Joan Atsieno</td>
+              <td>SCF/B/01-06014/2025</td>
+              <td>Computer Forensics and Security</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Bravin Anaswa</td>
+              <td>COM/B/01-00155/2025</td>
+              <td>Computer Science</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Q3: Registration form -->
+      <section id="registration">
+        <h2>Student Registration</h2>
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="regNumber">Registration Number</label>
+            <input
+              type="text"
+              id="regNumber"
+              name="regNumber"
+              placeholder="e.g. CIT/001/2024"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <span>Gender</span>
+            <label
+              ><input type="radio" name="gender" value="Male" required />
+              Male</label
+            >
+            <label
+              ><input type="radio" name="gender" value="Female" /> Female</label
+            >
+            <label
+              ><input type="radio" name="gender" value="Other" /> Other</label
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="programme">Academic Programme</label>
+            <select id="programme" name="programme" required>
+              <option value="">-- Select Programme --</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Information Technology">
+                Information Technology
+              </option>
+              <option value="Business Information Technology">
+                Business Information Technology
+              </option>
+              <option value="Software Engineering">Software Engineering</option>
+            </select>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+
+        <!-- Q6c, Q6d: JavaScript will display results here -->
+        <div id="output"></div>
+      </section>
+
+      <!-- Contact section -->
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: portal@mmust.ac.ke</p>
+        <p>Phone: +254 700 000 000</p>
+        <p>Address: P.O. Box 190-50100, Kakamega, Kenya</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 University Student Information Portal</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
