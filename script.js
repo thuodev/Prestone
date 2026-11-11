@@ -30,20 +30,61 @@ alert("The grade for a score of 75 is: " + grade);
 
 // ===== QUESTION SIX: DOM MANIPULATION AND EVENT HANDLING =====
 
+// // Q6a: Retrieve the registration form
+// const form = document.getElementById("registrationForm");
+// const output = document.getElementById("output");
+
+/// ===== QUESTION SIX & SEVEN: DOM, EVENTS AND VALIDATION =====
+
 // Q6a: Retrieve the registration form
 const form = document.getElementById("registrationForm");
 const output = document.getElementById("output");
 
-// Q6b: Add a submit event listener
+// Q7b: Email format check (text@domain.extension)
+function isValidEmail(email) {
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return pattern.test(email);
+}
+
+// Q6b: Submit event listener
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // stop the page from reloading
+  event.preventDefault();
 
-  // Q6c: Get the student's name and registration number
-  const name = document.getElementById("fullName").value;
-  const reg = document.getElementById("regNumber").value;
+  // Q6c: Get the values (trim removes spaces at the start and end)
+  const name = document.getElementById("fullName").value.trim();
+  const reg = document.getElementById("regNumber").value.trim();
+  const email = document.getElementById("email").value.trim();
 
-  // Display them on the webpage
-  // Q6d: Show a success message
+  const errors = [];
+
+  // Q7a: Name and registration number must not be empty
+  if (name === "") {
+    errors.push("Full name cannot be empty.");
+  }
+  if (reg === "") {
+    errors.push("Registration number cannot be empty.");
+  }
+
+  // Q7b: Email must follow a valid format
+  if (!isValidEmail(email)) {
+    errors.push("Please enter a valid email address (e.g. name@example.com).");
+  }
+
+  // If there are errors, show them and stop
+  if (errors.length > 0) {
+    let list = "";
+    for (let i = 0; i < errors.length; i++) {
+      list += "<li>" + errors[i] + "</li>";
+    }
+    output.innerHTML =
+      '<div class="error"><p><strong>Please fix the following:</strong></p><ul>' +
+      list +
+      "</ul></div>";
+    console.log("Validation failed:", errors);
+    return;
+  }
+
+  // Q6d: Success message
   output.innerHTML =
     '<div class="success">' +
     "<p><strong>Registration successful!</strong></p>" +
@@ -53,7 +94,11 @@ form.addEventListener("submit", function (event) {
     "<p>Registration Number: " +
     reg +
     "</p>" +
+    "<p>Email: " +
+    email +
+    "</p>" +
     "</div>";
+  console.log("Validation passed for:", name, reg, email);
 
-  form.reset(); // clear the form after submission
+  form.reset();
 });
